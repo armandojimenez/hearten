@@ -13,6 +13,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/support/</loc>
@@ -27,6 +28,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/es/</loc>
@@ -41,6 +43,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/es/support/</loc>
@@ -55,6 +58,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/pt/</loc>
@@ -69,6 +73,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/pt/support/</loc>
@@ -83,6 +88,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/id/</loc>
@@ -97,6 +103,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/id/support/</loc>
@@ -111,6 +118,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/tr/</loc>
@@ -125,6 +133,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/tr/support/</loc>
@@ -139,6 +148,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/de/</loc>
@@ -153,6 +163,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/de/support/</loc>
@@ -167,6 +178,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/fr/</loc>
@@ -181,6 +193,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/fr/support/</loc>
@@ -195,6 +208,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/it/</loc>
@@ -209,6 +223,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/it/support/</loc>
@@ -223,6 +238,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/pl/</loc>
@@ -237,6 +253,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/pl/support/</loc>
@@ -251,6 +268,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/ja/</loc>
@@ -265,6 +283,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/ja/support/</loc>
@@ -279,6 +298,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/ko/</loc>
@@ -293,6 +313,7 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/"/>
   </url>
   <url>
     <loc>https://armandojimenez.dev/hearten/ko/support/</loc>
@@ -307,5 +328,6 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/support/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/support/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/support/"/>
   </url>
 </urlset>
