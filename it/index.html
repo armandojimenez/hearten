@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr" data-app-slug="hearten" data-langs="en,es,pt,id,tr,de,fr,it,pl,ja,ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hearten: affermazioni quotidiane. Un libro di giorni più luminosi.</title>
+  <meta name="description" content="Affermazioni che si voltano come le pagine di un libro rilegato in tela. Apri il volume di ciò che porti oggi, scrivi pagine tue e conserva le righe che arrivano. Nessun account, niente che venga caricato.">
+  <link rel="canonical" href="https://armandojimenez.dev/hearten/it/">
+  <link rel="alternate" hreflang="en" href="https://armandojimenez.dev/hearten/">
+  <link rel="alternate" hreflang="es" href="https://armandojimenez.dev/hearten/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://armandojimenez.dev/hearten/pt/">
+  <link rel="alternate" hreflang="id" href="https://armandojimenez.dev/hearten/id/">
+  <link rel="alternate" hreflang="tr" href="https://armandojimenez.dev/hearten/tr/">
+  <link rel="alternate" hreflang="de" href="https://armandojimenez.dev/hearten/de/">
+  <link rel="alternate" hreflang="fr" href="https://armandojimenez.dev/hearten/fr/">
+  <link rel="alternate" hreflang="it" href="https://armandojimenez.dev/hearten/it/">
+  <link rel="alternate" hreflang="pl" href="https://armandojimenez.dev/hearten/pl/">
+  <link rel="alternate" hreflang="ja" href="https://armandojimenez.dev/hearten/ja/">
+  <link rel="alternate" hreflang="ko" href="https://armandojimenez.dev/hearten/ko/">
+  <link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/hearten/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Hearten">
+  <meta property="og:url" content="https://armandojimenez.dev/hearten/it/">
+  <meta property="og:title" content="Hearten: un libro di giorni più luminosi">
+  <meta property="og:description" content="Affermazioni quotidiane che si voltano come pagine. Uno scaffale di volumi rilegati, letture alle ore che scegli e pagine scritte da te. Gratis su iPhone e Android.">
+  <meta property="og:image" content="https://armandojimenez.dev/hearten/assets/og-image.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://armandojimenez.dev/hearten/assets/og-image.png">
+  <meta name="apple-itunes-app" content="app-id=6808354024">
+  <link rel="icon" href="../assets/favicon-64.png" sizes="64x64">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/CormorantGaramond-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/EBGaramond-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:'Cormorant Garamond';font-weight:400;font-style:normal;font-display:swap;src:url('../assets/fonts/CormorantGaramond-Regular.woff2') format('woff2')}@font-face{font-family:'Cormorant Garamond';font-weight:500;font-style:normal;font-display:swap;src:url('../assets/fonts/CormorantGaramond-Medium.woff2') format('woff2')}@font-face{font-family:'Cormorant Garamond';font-weight:600;font-style:normal;font-display:swap;src:url('../assets/fonts/CormorantGaramond-SemiBold.woff2') format('woff2')}@font-face{font-family:'Cormorant Garamond';font-weight:400;font-style:italic;font-display:swap;src:url('../assets/fonts/CormorantGaramond-Italic.woff2') format('woff2')}@font-face{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;font-display:swap;src:url('../assets/fonts/CormorantGaramond-MediumItalic.woff2') format('woff2')}@font-face{font-family:'EB Garamond';font-weight:400;font-style:normal;font-display:swap;src:url('../assets/fonts/EBGaramond-Regular.woff2') format('woff2')}@font-face{font-family:'EB Garamond';font-weight:500;font-style:normal;font-display:swap;src:url('../assets/fonts/EBGaramond-Medium.woff2') format('woff2')}@font-face{font-family:'EB Garamond';font-weight:600;font-style:normal;font-display:swap;src:url('../assets/fonts/EBGaramond-SemiBold.woff2') format('woff2')}@font-face{font-family:'EB Garamond';font-weight:400;font-style:italic;font-display:swap;src:url('../assets/fonts/EBGaramond-Italic.woff2') format('woff2')}</style>
+  <link rel="stylesheet" href="../style.css?v=fa7cc5c3">
+  <script>// Headings on this page keep the line breaks the store deck approved, so a
+// long word in a long language must shrink rather than wrap. The fit runs
+// BEFORE first paint (this file is inlined in <head> and called right after
+// each heading): running it only from the deferred bundle paints the CSS
+// clamp size first and then collapses the heading, moving the hero under it.
+window.htFitHeading = function htFitHeading(h) {
+  if (!h) return;
+  const lines = h.querySelectorAll('.hl');
+  if (!lines.length) return;
+  const cjk = /^(ja|ko|zh)/.test(document.documentElement.lang || 'en');
+  const floor = cjk ? 0.5 : 0.62;
+  const base = h.dataset.fitBase ? parseFloat(h.dataset.fitBase) : parseFloat(getComputedStyle(h).fontSize);
+  h.dataset.fitBase = String(base);
+  const room = () => h.clientWidth - 1;
+  const widest = () => {
+    const range = document.createRange();
+    let w = 0;
+    for (const line of lines) {
+      range.selectNodeContents(line);
+      // A Range measures the text, not the box: scrollWidth rounds, and 534
+      // in a 533 column reads as a fit and then wraps anyway.
+      w = Math.max(w, range.getBoundingClientRect().width);
+    }
+    return w;
+  };
+  let size = base;
+  h.style.fontSize = `${size}px`;
+  let guard = 0;
+  while (widest() > room() && size > base * floor && guard++ < 60) {
+    size = Math.max(base * floor, size - Math.max(1, size * 0.02));
+    h.style.fontSize = `${size}px`;
+  }
+  // Reserve the block so a later refit cannot move what is under it. The size
+  // itself is never frozen: on a slow load this first pass measured a
+  // substitute face, and the real one must be allowed to grow back.
+  const box = h.getBoundingClientRect().height;
+  if (box > (parseFloat(h.style.minHeight) || 0)) h.style.minHeight = `${Math.ceil(box)}px`;
+};
+window.htFitAll = function htFitAll() {
+  for (const h of document.querySelectorAll('[data-fit-heading]')) window.htFitHeading(h);
+};
+if (document.fonts) {
+  document.fonts.addEventListener('loadingdone', () => window.htFitAll());
+}
+window.addEventListener('resize', () => {
+  clearTimeout(window.__htFitT);
+  window.__htFitT = setTimeout(() => window.htFitAll(), 120);
+});
+</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Hearten: affermazioni quotidiane",
+  "alternateName": "Hearten",
+  "description": "Affermazioni che si voltano come le pagine di un libro rilegato in tela. Apri il volume di ciò che porti oggi, scrivi pagine tue e conserva le righe che arrivano. Nessun account, niente che venga caricato.",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, Android",
+  "inLanguage": "it",
+  "url": "https://armandojimenez.dev/hearten/it/",
+  "image": "https://armandojimenez.dev/hearten/assets/og-image.png",
+  "installUrl": [
+    "https://apps.apple.com/app/id6808354024",
+    "https://play.google.com/store/apps/details?id=dev.armandojimenez.hearten"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Believe PR",
+    "url": "https://armandojimenez.dev/hearten/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Believe PR"
+  }
+}</script>
+</head><body>
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header class="nav" data-nav>
+  <a class="nav__mark" href="./">Hearten</a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#library">La biblioteca</a>
+    <a href="#own">Le tue pagine</a>
+    <a href="#get" class="nav__cta">Scarica l'app</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="band band--paper hero">
+    <div class="bloom bloom--peach"></div>
+    <div class="bloom bloom--sage"></div>
+    <div class="inner hero__grid">
+      <div class="hero__words">
+        <h1 class="hero__title" data-fit-heading><span class="hl">Un libro di</span><span class="hl"><span class="hl-accent">giorni più luminosi.</span></span></h1>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+        <p class="lead hero__sub">Affermazioni quotidiane che si voltano come pagine. Voltare la pagina ti chiede di rallentare quel tanto che basta per leggere la riga, ed è la riga che resta.</p>
+        <div class="hero__badges">
+          <div class="badges"><a class="store-badge" data-store="apple" href="https://apps.apple.com/app/id6808354024" target="_blank" rel="noopener"><img src="../assets/app-store-badge.svg" alt="Download on the App Store" height="50"></a><a class="store-badge" data-store="google" href="https://play.google.com/store/apps/details?id=dev.armandojimenez.hearten" target="_blank" rel="noopener"><img src="../assets/google-play-badge.svg" alt="Get it on Google Play" height="50"></a></div>
+          <p class="free-line">Gratis su App Store e Google Play.</p>
+        </div>
+        <p class="body-copy body-copy--drop hero__copy">La pagina segue il pollice, si curva e attraversa la carta con un'ombra mentre passa. La lasci e si posa dall'altra parte, con la successiva che aspetta. La copertina si apre in circa un secondo.</p>
+      </div>
+      <div class="hero__book">
+        <div class="live-book" data-live="book" role="img" aria-label="Il libro di Hearten, aperto, con un foglio a metà del giro. La pagina sotto dice: Mi tratterò con la gentilezza che si riserva a un amico."></div>
+        <noscript><p class="note">Questa pagina disegna le schermate dell'app quando gli script sono attivi. Su App Store e Google Play il libro si volta con il pollice.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--cloth band--night" id="library">
+    <div class="bloom bloom--crown"></div>
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">I</span><span class="runhead">La Biblioteca</span></div>
+      <div class="spread spread--narrow spread--top">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">Di quale libro</span><span class="hl"><span class="hl-accent">hai bisogno oggi?</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+          <p class="body-copy">La biblioteca è una fila di volumi rilegati in tela, ognuno nel suo colore. Tiri giù quello che ti serve: Gentilezza con sé in una mattina difficile, Calma in un giorno rumoroso, Fiducia prima di quella cosa che rimandi. Ogni stagione si rilegano volumi nuovi.</p>
+          <p class="note">La lettura di oggi, Le mie preferite e Le mie parole stanno sullo stesso scaffale.</p>
+        </div>
+        <div class="spread__art">
+          <div class="shelf" data-live="shelf" role="img" aria-label="Uno scaffale di volumi rilegati in tela: Gentilezza con sé, Fiducia, Gratitudine, Calma, Gioia, Il mio valore, Coraggio, Forza, Calmare l’ansia, Sonno, Mattino, Rimarginare"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--pale" id="bindings">
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">II</span><span class="runhead">Rilegature</span></div>
+      <div class="spread spread--flip">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">Rilegato nella</span><span class="hl"><span class="hl-accent">tela che scegli.</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+          <p class="body-copy">Tele e carte, viste sul tuo libro prima di sceglierne una. La tela, il tono della carta e i caratteri restano insieme, così il libro sullo schermo somiglia a un libro che terresti su una mensola.</p>
+          <p class="note">La Bottega rilega una copertina da una tua fotografia.</p>
+        </div>
+        <div class="spread__art">
+          <div class="live-scene" data-live="bindings" role="img" aria-label="La schermata Rilegature su un telefono, accanto il libro rilegato nella tela Mare notturno."></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--cloth band--fig" id="own">
+    <div class="bloom bloom--crown"></div>
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">III</span><span class="runhead">Le mie parole</span></div>
+      <div class="spread">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">Scrivi le</span><span class="hl"><span class="hl-accent">tue pagine.</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+          <p class="body-copy">Una pagina scritta da te sta accanto a quelle scritte, con gli stessi caratteri, sulla stessa carta, con il tuo nome sotto se vuoi. La collochi nei volumi a cui appartiene e torna da te in una mattina qualunque.</p>
+          <p class="note">Comparirà in Le mie parole e nelle tue letture quotidiane.</p>
+        </div>
+        <div class="spread__art">
+          <div class="live-scene" data-live="own" role="img" aria-label="La scrivania su un telefono, accanto la pagina scritta e firmata."></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--paper" id="keep">
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">IV</span><span class="runhead">Preferite</span></div>
+      <div class="spread spread--flip">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">Tieni le pagine</span><span class="hl"><span class="hl-accent">che ti restano.</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+          <p class="body-copy">Il cuore tiene una pagina. La ricerca ritrova dalle parole una riga ricordata a metà. I giorni in cui ti sei presentato vengono contati in silenzio. Una pagina che nascondi lascia ogni schermata, comprese le tue letture e la tua schermata Home.</p>
+        </div>
+        <div class="spread__art">
+          <div class="live-cards" data-live="kept" role="img" aria-label="Tre pagine conservate sui loro fogli, ognuna con il volume da cui viene e da quanto è stata conservata."></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--cloth band--sage" id="readings">
+    <div class="bloom bloom--crown"></div>
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">V</span><span class="runhead">Letture</span></div>
+      <div class="spread">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">Promemoria alle</span><span class="hl"><span class="hl-accent">ore che scegli tu.</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+          <p class="body-copy">Imposta una lettura e il libro si apre da sé, con delicatezza. Una pagina prima che il telefono cominci a parlare, una a pranzo, l'ultima prima di spegnere la luce. Ogni lettura tiene la sua finestra, i suoi giorni e il suo volume, così una settimana piena non chiude la pratica.</p>
+          <div class="paper-panel"><div class="live-cards" data-live="readingcards"></div></div>
+          <p class="note">Ogni notifica è composta sul tuo dispositivo.</p>
+        </div>
+        <div class="spread__art">
+          <div class="live-phone" data-live="readings" role="img" aria-label="Una schermata di blocco che indossa la copertina del libro, con tre letture in arrivo."></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--pale" id="widgets">
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">VI</span><span class="runhead">Widget della Home</span></div>
+      <div class="spread spread--flip">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">La pagina di oggi,</span><span class="hl"><span class="hl-accent">sulla tua schermata.</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+          <p class="body-copy">Il libro aperto, o chiuso, disegnato nella rilegatura che hai scelto. La prima pagina del giorno è lì prima che tu apra qualsiasi cosa.</p>
+        </div>
+        <div class="spread__art">
+          <div class="live-scene" data-live="widgets" role="img" aria-label="Una schermata Home con i widget di Hearten: il libro aperto e una pagina."></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--cloth band--clay" id="trust">
+    <div class="bloom bloom--crown"></div>
+    <div class="inner">
+      <div class="chapter-head"><span class="folio">VII</span><span class="runhead">Le tue pagine</span></div>
+      <div class="spread spread--wide">
+        <div class="spread__words">
+          <h2 class="" data-fit-heading><span class="hl">Nessun account.</span><span class="hl"><span class="hl-accent">Niente caricato.</span></span></h2>
+<script>htFitHeading(document.currentScript.previousElementSibling)</script>
+        </div>
+        <div class="spread__art">
+          <p class="body-copy" style="color:var(--band-ink)">Nessuna email, nessuna password, nessuna analisi, nessuna pubblicità. Le pagine che scrivi, quelle che conservi e le ore che imposti restano sul tuo dispositivo, e il libro intero si legge in aereo.</p>
+          <div class="chips">
+            <span class="chip"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5" stroke="#5c6b50" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Nessun account</span><span class="chip"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5" stroke="#5c6b50" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Niente caricato</span><span class="chip"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5" stroke="#5c6b50" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Si legge offline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--paper colophon" id="get">
+    <div class="bloom bloom--peach"></div>
+    <div class="inner">
+      <div class="live-colophon" data-live="colophon" role="img" aria-label="Il libro di Hearten, chiuso, rilegato in tela verde."></div>
+      <div class="ornament"><svg width="88" height="23" viewBox="0 0 54 14" fill="none" aria-hidden="true"><path d="M2 7h16M36 7h16" stroke="#b78d5e" stroke-width=".8"/><path d="M27 1.5 29.6 7 27 12.5 24.4 7Z" stroke="#b78d5e" stroke-width=".9" fill="none"/></svg></div>
+      <p class="colophon__quote">Che ti trovi in un giorno buono, e resti per gli altri.</p>
+      <p class="close-line" style="margin-top:22px">Un libro di giorni più luminosi, e la pagina di oggi sta aspettando.</p>
+      <div class="badges"><a class="store-badge" data-store="apple" href="https://apps.apple.com/app/id6808354024" target="_blank" rel="noopener"><img src="../assets/app-store-badge.svg" alt="Download on the App Store" height="56"></a><a class="store-badge" data-store="google" href="https://play.google.com/store/apps/details?id=dev.armandojimenez.hearten" target="_blank" rel="noopener"><img src="../assets/google-play-badge.svg" alt="Get it on Google Play" height="56"></a></div>
+      <div class="contact">
+        <button class="contact__btn" type="button" data-copy-email="hearten@armandojimenez.dev" aria-label="Contatti: hearten@armandojimenez.dev">Contatti: hearten@armandojimenez.dev</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <span class="foot__mark">Rilegato con cura, da una persona sola.</span>
+    <a href="https://armandojimenez.dev/apps/hearten/terms.html">Termini di uso</a>
+    <a href="https://armandojimenez.dev/apps/hearten/privacy-policy.html">Informativa sulla privacy</a>
+    <a href="support/">Assistenza</a>
+    <nav class="lang-toggle" aria-label="Language"><a class="lang-toggle__btn" data-lang="en" hreflang="en" href="../">EN</a><a class="lang-toggle__btn" data-lang="es" hreflang="es" href="../es/">ES</a><a class="lang-toggle__btn" data-lang="pt" hreflang="pt-BR" href="../pt/">PT</a><a class="lang-toggle__btn" data-lang="id" hreflang="id" href="../id/">ID</a><a class="lang-toggle__btn" data-lang="tr" hreflang="tr" href="../tr/">TR</a><a class="lang-toggle__btn" data-lang="de" hreflang="de" href="../de/">DE</a><a class="lang-toggle__btn" data-lang="fr" hreflang="fr" href="../fr/">FR</a><a class="lang-toggle__btn" data-lang="it" hreflang="it" href="../it/" aria-current="true">IT</a><a class="lang-toggle__btn" data-lang="pl" hreflang="pl" href="../pl/">PL</a><a class="lang-toggle__btn" data-lang="ja" hreflang="ja" href="../ja/">JA</a><a class="lang-toggle__btn" data-lang="ko" hreflang="ko" href="../ko/">KO</a></nav>
+    <span class="foot__end">2026 © Believe PR. All Rights Reserved</span>
+  </div>
+</footer>
+
+<div class="snackbar" role="status" aria-live="polite"></div>
+
+<script type="application/json" id="hearten-data">{"locale":"it","assets":{"icon":"../assets/icon-512.png","base":"../assets/"},"strings":{"appTitle":"Hearten","libraryTitle":"La Biblioteca","bindingsTitle":"Rilegature","binderyTitle":"La Bottega","ownWordsTitle":"Le mie parole","readingsTitle":"Letture","studyTitle":"Lo Studio","favoritesTitle":"Le mie preferite","todaysReadingTitle":"La lettura di oggi","pageCount":"{count, plural, one {{count} pagina} other {{count} pagine}}","tagline":"un libro di giorni più luminosi","coverTitle":"Il libro di giorni più luminosi di {name}","tapToOpen":"Tocca per aprire","coverSemantics":"{title}. {tagline}. Tocca per aprire il tuo libro","keepAction":"Conservare questa pagina","unkeepAction":"Togliere dalle preferite","shareAction":"Condividere questa pagina","hideAction":"Nascondere questa pagina","keptToast":"Conservata tra le tue preferite","unkeptToast":"Tolta dalle preferite","hiddenToast":"Nascosta dal tuo libro","hideFailedToast":"Non è stato possibile nascondere quella pagina","favoriteFailedToast":"Non è stato possibile cambiare le tue preferite","undoFailedToast":"Non è stato possibile riportare quella pagina","undo":"Annulla","shareText":"{text}\n\nda Hearten, un libro di giorni più luminosi","pageSemantics":"Pagina {folio}, {volume}: {text}","continuesOnNextPage":"Continua nella pagina seguente","endTitle":"Domani arrivano pagine nuove","endBody":"Hai girato tutte le pagine di oggi.","browseShelves":"Sfogliare gli scaffali","emptyFavoritesTitle":"Non hai ancora conservato niente","emptyFavoritesBody":"Tocca il cuore su una pagina che ami e ti aspetterà qui.","emptyOwnPagesTitle":"Ancora nessuna pagina tua","emptyOwnPagesBody":"Imprimi una pagina con le tue parole in questo libro.","writeAPage":"Scrivere una pagina","emptyLockedTitle":"Questo volume è Gilded","emptyLockedBody":"Apri l’edizione Gilded per leggerne ogni pagina.","backToShelves":"Torna agli scaffali","emptyHiddenTitle":"Ogni pagina qui è nascosta","emptyHiddenBody":"Puoi riportarle dallo Studio.","errorTitle":"Il libro non si è aperto","errorBody":"Qualcosa è andato storto mentre leggevamo le tue pagine.","tryAgain":"Riprova","back":"Indietro","searchTitle":"Cercare negli scaffali","libraryPrompt":"Di quale libro hai bisogno oggi?","yourVolumesLabel":"I tuoi volumi","theChaptersLabel":"I capitoli","newVolumesEachSeason":"nuovi volumi a ogni stagione","openVolumeSemantics":"{title}, aperto ora","lockedVolumeSemantics":"{title}, volume dell’edizione Gilded","yourBindingLabel":"La tua rilegatura","coversLabel":"Copertine","paperLabel":"Carta","bindingSummary":"{cloth} · {paper}","bindingFailedToast":"Non è stato possibile conservare la tua rilegatura","bindingSemantics":"{name}, {cloth}","lockedBindingSemantics":"{name}, {cloth}, rilegatura dell’edizione Gilded","lockedPaperSemantics":"{name}, carta dell’edizione Gilded","currentBindingSemantics":"Il tuo libro, rilegato in {name}","bindingMeadowName":"Prato","bindingMeadowCloth":"Tela salvia","bindingDawnName":"Alba","bindingDawnCloth":"Tela rosata","bindingNightSeaName":"Mare notturno","bindingNightSeaCloth":"Tela indaco","bindingLinenName":"Lino","bindingLinenCloth":"Tela avena","bindingClayName":"Argilla","bindingClayCloth":"Tela terracotta","bindingFigName":"Fico","bindingFigCloth":"Tela prugna","paperCreamLaidName":"Crema vergata","paperCreamLaidPhrase":"Carta vergata crema","paperIvorySmoothName":"Avorio liscia","paperIvorySmoothPhrase":"Carta avorio liscia","paperBlushWashName":"Velatura rosata","paperBlushWashPhrase":"Carta velatura rosata","paperMossWashName":"Velatura muschio","paperMossWashPhrase":"Carta velatura muschio","gildedTag":"Gilded","binderyBannerTitle":"Rilega il tuo libro","binderyBannerBody":"Le tue foto, il tuo titolo, il tuo carattere.","volumeSelfKindnessTitle":"Gentilezza con sé","volumeSelfKindnessInfo":"Pagine che ti insegnano a parlarti come a una persona amata.","volumeConfidenceTitle":"Fiducia","volumeConfidenceInfo":"Sta’ un po’ più dritto a ogni pagina.","volumeGivingThanksTitle":"Gratitudine","volumeGivingThanksInfo":"Conta ciò che è già buono, e guardalo crescere.","volumeCalmTitle":"Calma","volumeCalmInfo":"Un porto quieto per i giorni rumorosi.","volumeJoyTitle":"Gioia","volumeJoyInfo":"Pagine che rendono la giornata più leggera.","volumeWorthinessTitle":"Il mio valore","volumeWorthinessInfo":"Bastavi già prima di aprire questo libro.","volumeCourageTitle":"Coraggio","volumeCourageInfo":"Per la cosa coraggiosa che stai per fare.","volumeStrengthTitle":"Forza","volumeStrengthInfo":"Pagine per le stagioni difficili.","volumeAnxietyReliefTitle":"Calmare l’ansia","volumeAnxietyReliefInfo":"Respiri lenti, pensieri più morbidi.","volumeSleepTitle":"Sonno","volumeSleepInfo":"Ultime pagine prima che la luce si spenga.","volumeMorningTitle":"Mattino","volumeMorningInfo":"Apri qui mentre sale il caffè.","volumeMendingTitle":"Rimarginare","volumeMendingInfo":"Parole gentili mentre ti rimetti insieme.","volumeLettingGoTitle":"Lasciare andare","volumeLettingGoInfo":"Certe pagine servono per essere girate.","volumeAbundanceTitle":"Abbondanza","volumeAbundanceInfo":"C’è più che abbastanza, a partire da te.","volumeMotivationTitle":"Slancio","volumeMotivationInfo":"Oggi conta. Questa pagina è d’accordo.","volumeFocusTitle":"Chiarezza","volumeFocusInfo":"Una pagina, una cosa per volta.","volumeCareerTitle":"Lavoro","volumeCareerInfo":"Presentati per il lavoro che stai costruendo.","volumeWellnessTitle":"Benessere","volumeWellnessInfo":"Parole gentili per il corpo che ti porta.","volumeLoveTitle":"Amore","volumeLoveInfo":"Pagine per il cuore, in ogni senso.","volumeFamilyTitle":"Famiglia","volumeFamilyInfo":"Per le persone che dividono la tua tavola.","volumeFaithSpiritTitle":"Fede e spirito","volumeFaithSpiritInfo":"Parole per ciò che tieni come sacro.","volumeStillnessTitle":"Quiete","volumeStillnessInfo":"Resta con una pagina. La pratica è questa.","volumeFreshStartsTitle":"Nuovi inizi","volumeFreshStartsInfo":"Ogni pagina bianca è un inizio.","volumeLettersFromTomorrowTitle":"Lettere da domani","volumeLettersFromTomorrowInfo":"Righe dalla persona che stai diventando.","volumeKindWordsTitle":"Parole gentili","volumeKindWordsInfo":"I complimenti che meriti di sentire più spesso.","binderyCoverArtLabel":"I · Immagine di copertina","binderyTitleLabel":"II · Titolo","binderyTypefaceLabel":"III · Carattere","binderyPagesLabel":"IV · Pagine","binderyCamera":"Fotocamera","binderyGallery":"Galleria","binderyScenes":"Scene","binderyScenesCaption":"Scene scelte, arte serena disegnata per Hearten","sceneGoldenDunes":"Dune dorate","sceneSeaMorning":"Mattino di mare","sceneAmberField":"Campo d’ambra","sceneFernHollow":"Conca di felci","sceneRoseDusk":"Tramonto rosa","sceneNightHills":"Colline notturne","sceneSemantics":"{name}, una scena di copertina","binderyTitleHint":"Dai un nome al tuo libro","binderyTitleSemantics":"Il titolo impresso sulla tua copertina","binderyTitleDone":"Fatto","faceCormorant":"Cormorant","faceGaramond":"Garamond","faceGelasio":"Gelasio","faceSemantics":"{name}, il carattere in cui è impresso il tuo titolo","paperMistWashName":"Velatura nebbia","paperMistWashPhrase":"Carta velatura nebbia","textureLaid":"Vergata","textureSmooth":"Liscia","textureSemantics":"Trama della carta {name}","bindMyBook":"Rilegare il mio libro","binderyFoot":"Incluso in Gilded · le tue foto non lasciano mai il dispositivo","binderyPreviewSemantics":"{title}, rilegato in {art}, impresso in {face}","boundToast":"Rilegato. Ora il tuo libro lo indossa.","bindFailedToast":"Non è stato possibile rilegare il tuo libro","photoFailedToast":"Quell’immagine non si è aperta","photoDeniedToast":"Hearten non ha il permesso di aprirla","boundByYouLabel":"Rilegato da te","customBindingSemantics":"{title}, un libro che hai rilegato","lockedCustomBindingSemantics":"{title}, un libro che hai rilegato. Gilded.","removeBinding":"Togliere dalla mia bottega","bindingRemovedToast":"Tolto dalla tua bottega","removeBindingShort":"Togliere","photoCoverName":"Una tua fotografia","photoCoverPhrase":"una tua fotografia","editBinding":"Modificare questo libro","saveChanges":"Conservare le modifiche","savedToast":"Le tue modifiche sono rilegate","editBindingShort":"Rilegare","removeBindingTitle":"Togliere questo libro?","removeBindingBody":"Se ne va solo la copertina. Le tue pagine restano esattamente come sono.","removeBindingConfirm":"Toglierlo","keepIt":"Tenerlo","newPageTitle":"Pagina nuova","yourPageTitle":"La tua pagina","closeDesk":"Chiudere","deskPrompt":"Scrivi qualcosa che il tuo cuore dovrebbe sentire più spesso.","deskEntryPlaceholder":"Comincia qui.","deskEntrySemantics":"Le parole della tua pagina","authorPlaceholder":"il tuo nome","optionalHint":"(facoltativo)","authorSemantics":"Firma la pagina, se ti va","alsoShelveUnder":"Riporre anche sotto","pressIntoMyBook":"Imprimere nel mio libro","deskFoot":"Comparirà in Le mie parole e nelle tue letture quotidiane.","deskFootLocked":"Nell’edizione gratuita conservi tre pagine tue. Gilded le conserva tutte, e questa pagina lo aspetta.","pressedToast":"Impressa nel tuo libro","pressFailedToast":"Non è stato possibile imprimere la tua pagina","pageSavedToast":"La tua pagina è riscritta","byline":"di {name}","pressedPagesLabel":"Pagine che hai impresso","startANewPage":"Cominciare una pagina nuova","editPage":"Riscrivere questa pagina","removePage":"Togliere questa pagina","removePageTitle":"Togliere questa pagina?","removePageBody":"Le tue parole lasciano il libro per sempre. Nient’altro cambia.","removePageConfirm":"Toglierla","pageRemovedToast":"Tolta dal tuo libro","ownPageSemantics":"La tua pagina: {text}","lockedOwnPageSemantics":"La tua pagina: {text}. Gilded.","lockedPageNote":"In attesa di Gilded","writeAnotherPage":"Scrivere un’altra pagina","editPageShort":"Riscrivere","removePageShort":"Togliere","removeFailedToast":"Non è stato possibile togliere la tua pagina","saveFailedToast":"Non è stato possibile conservare le tue modifiche","charactersLeft":"{count, plural, one{resta 1 carattere} other{restano {count} caratteri}}","deskPagesUnreadable":"Non è stato possibile leggere le tue pagine ora.","pageBylineSemantics":"Firmata da {name}","ownWordsPrompt":"Le pagine che hai scritto tu.","ownWordsEmptyPrompt":"Ancora niente qui. Scrivi la prima.","ownWordsAllowanceFoot":"Nell’edizione gratuita conservi tre pagine tue. Gilded le conserva tutte.","writeYourOwn":"Scrivere la tua","ownWordsShort":"Le mie","keepPage":"Tenerla","dailyReadings":"Promemoria quotidiani","readingsPrompt":"Il tuo libro si aprirà da sé, con delicatezza.","readingsEmptyPrompt":"Scegli quando il tuo libro deve aprirsi da sé.","newReading":"Nuova lettura","readingsAllowanceFoot":"Nell’edizione gratuita conservi una lettura. Gilded ne conserva cinque.","readingsFullFoot":"Cinque letture sono il massimo che un libro regge.","readingDefaultName":"Lettura quotidiana","readingSchedule":"{count, plural, one{{count}× · {from}} other{{count}× · {from} - {until}}}","readingSemantics":"{name}, {schedule}, da {book}","lockedReadingSemantics":"{name}, {schedule}, da {book}. Gilded.","readingOnSemantics":"{name} è attiva","readingDaysSemantics":"{days}","readingDayOn":"{day}, attivo","readingDayOff":"{day}, non attivo","lockedReadingNote":"In attesa di Gilded","readingsPermissionAskTitle":"Lascia che il tuo libro ti raggiunga","readingsPermissionAskBody":"Una lettura arriva come una notifica silenziosa. Non arriva mai nient’altro.","readingsPermissionAskAction":"Consentire le letture","readingsPermissionDeniedTitle":"Le tue letture non possono arrivare","readingsPermissionDeniedBody":"Le notifiche di Hearten sono disattivate. Le tue letture sono conservate e aspettano.","readingsPermissionDeniedAction":"Aprire le impostazioni","readingChannelDescription":"Le pagine su cui il tuo libro si apre da sé.","readingRefillTitle":"Le tue letture stanno finendo","readingLastTitle":"Apri il tuo libro perché le letture continuino","newReadingTitle":"Nuova lettura","readingNameLabel":"Il suo nome","readingNamePlaceholder":"Pagine del mattino","howOften":"Quanto spesso","perDayCount":"{count}×","pagesADay":"{count, plural, one{pagina al giorno} other{pagine al giorno}}","fewerPages":"Meno pagine","morePages":"Più pagine","between":"Tra","fromTime":"Dalle","untilTime":"Alle","atTime":"Alle","pickTimeSemantics":"{label}, {time}","onDays":"Nei giorni","fromWhichBook":"Da quale libro","previewOfYourNotification":"Anteprima della tua notifica","readingPreviewToday":"Oggi alle {time}","readingPreviewTomorrow":"Domani alle {time}","saveThisReading":"Conservare questa lettura","readingSavedToast":"La tua lettura è impostata","readingSaveFailedToast":"Non è stato possibile conservare la tua lettura","readingNeedsADay":"Scegli almeno un giorno.","readingWindowEmpty":"L’inizio e la fine sono la stessa ora. Allarga la finestra, o chiedi una pagina al giorno.","readingWindowTooNarrow":"{count, plural, other{Quella finestra è troppo breve per {count} pagine. Allargala, o chiedine meno.}}","removeReading":"Togliere questa lettura","removeReadingShort":"Togliere","removeReadingTitle":"Togliere questa lettura?","removeReadingBody":"Il tuo libro smetterà di aprirsi a queste ore. Nient’altro cambia.","removeReadingConfirm":"Toglierla","keepReading":"Tenerla","readingRemovedToast":"Tolta dalle tue letture","readingRemoveFailedToast":"Non è stato possibile togliere la tua lettura","readingsUnreadable":"Non è stato possibile leggere le tue letture ora.","readingsGildedFoot":"Più di una lettura fa parte di Gilded.","chooseThisBook":"{book}, il libro che questa lettura apre","lockedBookForReading":"{book}. Gilded.","emptyBookForReading":"{book}. Ancora nessuna pagina dentro.","readingSourceEmptyFavorites":"Non hai ancora conservato niente. Conserva una pagina e potrai leggere da qui.","readingSourceEmptyOwnPages":"Ancora nessuna pagina tua. Scrivine una e potrai leggere da qui.","readingSourceSubstituted":"Questo libro non ha niente da mandare ora, così la tua lettura apre invece la lettura di oggi.","pickTimeDone":"Fatto","gildedBannerTitle":"Ogni libro. Ogni rilegatura. Tuoi.","gildedBannerOffer":"{count, plural, one{1 settimana gratis, poi {price} all’anno.} other{{count} settimane gratis, poi {price} all’anno.}}","gildedBannerOfferDays":"{count, plural, one{1 giorno gratis, poi {price} all’anno.} other{{count} giorni gratis, poi {price} all’anno.}}","gildedBannerOfferMonths":"{count, plural, one{1 mese gratis, poi {price} all’anno.} other{{count} mesi gratis, poi {price} all’anno.}}","gildedBannerOfferYears":"{count, plural, one{1 anno gratis, poi {price} all’anno.} other{{count} anni gratis, poi {price} all’anno.}}","gildedBannerOfferPlain":"{price} all’anno.","gildedBannerSemantics":"{title} {offer} {cta}","gildedYours":"L’intera biblioteca è tua.","trialFreeDays":"{count, plural, one{1 giorno gratis} other{{count} giorni gratis}}","trialFreeWeeks":"{count, plural, one{1 settimana gratis} other{{count} settimane gratis}}","trialFreeMonths":"{count, plural, one{1 mese gratis} other{{count} mesi gratis}}","trialFreeYears":"{count, plural, one{1 anno gratis} other{{count} anni gratis}}","trialAfterDays":"{count, plural, one{dopo il tuo giorno gratis} other{dopo i tuoi {count} giorni gratis}}","trialAfterWeeks":"{count, plural, one{dopo la tua settimana gratis} other{dopo le tue {count} settimane gratis}}","trialAfterMonths":"{count, plural, one{dopo il tuo mese gratis} other{dopo i tuoi {count} mesi gratis}}","trialAfterYears":"{count, plural, one{dopo il tuo anno gratis} other{dopo i tuoi {count} anni gratis}}","gildedContinue":"Continua","gildedSubscribeCta":"Abbonati ora","gildedNoChargeToday":"Oggi non si paga niente · disdici quando vuoi nelle Impostazioni","gildedCancelAnytime":"Disdici quando vuoi nelle Impostazioni","gildedWelcomeTitle":"Il tuo libro è rilegato.","gildedWelcomeTitleEm":"Ora aprilo tutto.","gildedWelcomeYoursHead":"I tuoi primi capitoli","gildedWelcomeYoursLocked":"{count, plural, one{Uno di loro si apre con Gilded. Come ogni altro libro sullo scaffale.} other{{count} di loro si aprono con Gilded. Come ogni altro libro sullo scaffale.}}","gildedWelcomeYoursOpen":"{count, plural, other{I tuoi sono già aperti. Gilded apre gli altri {count}.}}","gildedWelcomeOpensHead":"Tutto quello che Gilded apre","gildedTrialTodayTitle":"Oggi: si apre tutto","gildedTrialTodayBody":"{count, plural, one{Il libro, la Bottega, i widget e pagine tue senza limite.} other{Tutti i {count} libri, la Bottega, i widget e pagine tue senza limite.}}","gildedTrialNoteTitle":"Giorno {day}: un avviso gentile","gildedTrialNoteBody":"Ti avvisiamo prima di ogni addebito. Disdici con un tocco.","gildedTrialBeginTitle":"Giorno {day}: comincia l’abbonamento","gildedTrialBeginBody":"{price} all’anno.","gildedTrialBeginBodyMonthly":"{price} all’anno. Circa {monthly} al mese, per ogni pagina che segue.","gildedPreferMonthly":"Preferisci mese per mese?","saleTitle":"Un prezzo più gentile, solo per oggi.","saleHoursLeft":"{count, plural, one{Tuo per 1 ora ancora} many{Tuo per {count} ore ancora} other{Tuo per {count} ore ancora}}","saleStandardPlans":"Preferisci iniziare con una settimana gratis?","saleWasPrice":"prima {price}","planYearly":"Annuale","planMonthly":"Mensile","planYearlyGilded":"Annuale · Gilded","planSave":"Risparmia il {percent}%","planBilledMonthly":"addebitato ogni mese","pricePerYear":"{price}/anno","pricePerMonth":"{price}/mese","pricePerMonthApprox":"≈ {price} al mese","pricePerWeekApprox":"≈ {price} a settimana","gildedFeatureVolumes":"{count, plural, one{Il libro della Biblioteca, aperto per sempre} other{Tutti i {count} libri della Biblioteca, aperti per sempre}}","gildedFeatureBindery":"La Bottega: libri dalle tue fotografie","gildedFeatureReadings":"Letture tutto il giorno, dal mattino alla sera","gildedFeatureOwnWords":"Pagine senza limite in Le mie parole","gildedFeatureWidgets":"Widget del libro per la schermata Home","restoreAction":"Ripristina","restorePurchases":"Ripristinare gli acquisti","termsLink":"Condizioni","privacyLink":"Privacy","opensInBrowser":"{label}, si apre nel tuo browser","closeAction":"Chiudere","storeUnreachableTitle":"Il negozio non ha risposto","storeUnreachableBody":"Hearten non è riuscito a raggiungere il negozio ora. Non è stato addebitato niente, e ogni libro che hai è ancora qui.","purchaseRestoredNothing":"Questo account del negozio non ha ancora niente da riportare.","purchasePending":"Il tuo acquisto è dal negozio. Gilded si apre appena viene approvato.","purchaseOffline":"Non è stato possibile raggiungere il negozio ora.","purchaseStoreError":"Il negozio non è riuscito a concludere. Prova a ripristinare i tuoi acquisti, o riprova tra un momento.","trialNoteTitle":"Un avviso gentile","trialNoteBody":"Gilded comincia tra due giorni. Tienilo, o fermalo quando vuoi nelle Impostazioni.","restoreRow":"Ripristinare gli acquisti","shareHearten":"Condividere Hearten","shareHeartenText":"Hearten, un libro di giorni più luminosi\n{url}","homeWidgets":"Widget della Home","reviewPrompt":"Ti piace Hearten? Una parola gentile aiuta gli altri a trovarlo.","reviewFailedToast":"Il negozio non si è aperto ora.","languageRow":"Lingua","writeToUs":"Scrivici","termsAndPrivacy":"Condizioni e privacy","studyColophon":"Hearten {version} · rilegato con cura","studyColophonSemantics":"Informazioni su Hearten, versione {version}","languageTitle":"Lingua","languagePrompt":"Il tuo libro, nella lingua del tuo cuore.","languageFoot":"Le affermazioni sono scritte con cura per ogni lingua, da chi la parla.","languageArriving":"in scrittura","languageArrivingSemantics":"{language}, in scrittura, non ancora scegliibile","languageEnglish":"Inglese","languageSpanish":"Spagnolo","languagePortuguese":"Portoghese","languageGerman":"Tedesco","languageFrench":"Francese","languageItalian":"Italiano","languagePolish":"Polacco","languageIndonesian":"Indonesiano","languageTurkish":"Turco","languageJapanese":"Giapponese","languageKorean":"Coreano","aboutTitle":"Informazioni","aboutLead":"Un libro di giorni più luminosi.","aboutNameHead":"Il nome","aboutNameBody":"Hearten è un verbo inglese. Incoraggiare qualcuno vuol dire lasciarlo più sollevato di come lo hai trovato, e dentro la parola c’è un cuore. Dice a cosa serve questo libro meglio di quanto potrebbe fare una frase.","aboutBookHead":"Il libro","aboutBookBody":"Questo è un libro, non un feed. Ogni affermazione è una pagina che giri con il pollice, una per volta, e il libro tiene il segno. Conserva le pagine che ti arrivano, imprimi le tue, e rilega la copertina con la tua mano.","aboutInsideHead":"Dentro questa edizione","aboutInsideVolumes":"{count, plural, =1{1 volume sullo scaffale} other{{count} volumi sullo scaffale}}","aboutInsidePages":"{count, plural, =1{1 pagina da girare} other{{count} pagine da girare}}","aboutInsideBindings":"{count, plural, =1{1 rilegatura in tela} other{{count} rilegature in tela}}","aboutInsideLanguages":"{count, plural, =1{1 lingua finora} other{{count} lingue finora}}","aboutNotHead":"Cosa non è","aboutNotBody":"Qui non c’è un feed e non c’è niente che scorra all’infinito. Nessuna serie da tenere, nessun distintivo da guadagnare, nessuno che conta quante volte lo apri. Hearten non porta pubblicità e non raccoglie niente su di te.","aboutPagesHead":"Le tue pagine","aboutPagesBody":"Quello che conservi, nascondi, scrivi e rileghi resta su questo dispositivo. Non viene mai caricato, e qui nessuno può leggerlo.","aboutGildedHead":"L’edizione Gilded","aboutGildedBody":"L’intera biblioteca, la Bottega, tutte le pagine tue che ti va di scrivere, e fino a cinque letture al giorno. Una edizione, e apre tutto.","aboutGildedAction":"Vedere l’edizione Gilded","aboutMadeHead":"Fatto da","aboutQuote":"Che ti trovi in un giorno buono, e resti per gli altri.","aboutVersion":"Versione {version}","makerTitle":"L’autore","makerLead":"Ciao. Faccio app da solo, e Hearten è una di queste.","makerLocation":"Carolina, Porto Rico","makerWhyHead":"Perché un libro","makerWhyBody":"Faccio app di affermazioni dal 2021, e ognuna era un feed: una scheda, uno scorrimento, un’altra scheda, sparita. Le parole meritavano di meglio. Così ho costruito quella da cui volevo leggere io, con carta che si gira e una copertina su cui mettere un nome.","makerWordsHead":"Le parole","makerWordsBody":"Le pagine vengono dalla biblioteca che costruisco da anni nelle mie altre app, rivista e ricomposta per questa. Niente viene generato mentre leggi: ogni pagina è stata scelta prima che il libro fosse rilegato.","makerLifeHead":"Lontano dallo schermo","makerLifeBody":"Camminate, libri e giochi, soprattutto. Poi torno e costruisco la prossima piccola cosa.","makerAppsHead":"Altro da Armando","makerAppsSummary":"{count, plural, =1{1 app} other{{count} app}} · dal {year}","makerAppOpen":"Aprire {name} sul negozio","makerThanks":"Grazie per aver dato a questo libro un posto tutto suo.","makerCardSemantics":"{name}, sull’autore","makerOpenFailedToast":"Non si è aperto ora.","contactLead":"Leggiamo ogni lettera.","contactBody":"Dicci cosa manca, cosa si è rotto, o quale pagina hai amato. Una riga basta.","contactAddressLabel":"Il nostro indirizzo","contactWrite":"Scrivici","contactCopy":"Copiare l’indirizzo","contactCopiedToast":"Indirizzo copiato","contactNoMailToast":"Nessuna app di posta ha risposto, così l’indirizzo è stato copiato.","legalLead":"Il tuo libro è tuo, e resta sul tuo dispositivo.","legalPagesHead":"Quello che fai tu","legalPagesBody":"Le pagine che scrivi, quelle che conservi o nascondi, le tue letture e le tue rilegature sono tenute su questo dispositivo. Non vengono mai caricate e noi non le vediamo mai.","legalPhotosHead":"Le tue fotografie","legalPhotosBody":"Una copertina che rileghi con una tua immagine viene copiata nella cartella di Hearten su questo dispositivo. L’immagine non ne esce mai.","legalCrashHead":"Segnalazioni di errore","legalCrashBody":"Se Hearten smette di funzionare invia una segnalazione sul guasto perché possa essere riparato. La segnalazione non porta nessuna parola delle tue pagine, e nessun nome o account di alcun tipo.","legalTrackingHead":"Nessun tracciamento","legalTrackingBody":"In Hearten non c’è da nessuna parte analisi d’uso, pubblicità o un profilo di te. È per questo che qui non c’è un interruttore per spegnere niente di tutto ciò.","legalGildedHead":"L’edizione Gilded","legalGildedBody":"Gilded è un abbonamento addebitato da App Store o Google Play. Si rinnova finché non lo disdici, e lo disdici lì, non qui. Niente di quello che hai fatto viene cancellato se scade.","legalQuestionsHead":"Domande","legalQuestionsBody":"Scrivici e ti risponderà una persona.","readingsActive":"{count, plural, one{{count} attiva} other{{count} attive}}","rowWithValue":"{label}, {value}","contactCopyWord":"Copiare","legalTitle":"Note legali","languageSaveFailedToast":"Non è stato possibile conservare la tua lingua.","contactWriteHead":"Cosa scrivere","favoritesRow":"Preferite","searchShort":"Ricerca","historyRow":"Pagine che hai letto","historyTitle":"Lette finora","hiddenRow":"Pagine nascoste","hiddenTitle":"Messe via","favoritesPrompt":"{count, plural, one{Una pagina di cui il tuo cuore ha piegato l’angolo.} other{{count} pagine di cui il tuo cuore ha piegato gli angoli.}}","favoritesFoot":"Scorri una pagina a sinistra per lasciarla andare · vivono anche nel tuo libro delle Preferite","favoritesEmptyPrompt":"Tocca il cuore su una pagina che ami e ti aspetterà qui.","keptToday":"conservata oggi","keptYesterday":"conservata ieri","keptDaysAgo":"{count, plural, other{conservata {count} giorni fa}}","keptWeeksAgo":"{count, plural, one{conservata 1 settimana fa} other{conservata {count} settimane fa}}","keptMonthsAgo":"{count, plural, one{conservata 1 mese fa} other{conservata {count} mesi fa}}","keptYearsAgo":"{count, plural, one{conservata 1 anno fa} other{conservata {count} anni fa}}","letItGo":"Lasciare andare questa pagina","letItGoWord":"Lasciare andare","pageLetGoToast":"Lasciata andare","keptAgainToast":"Conservata di nuovo","keptPageSemantics":"{volume}: {text}, {kept}","lockedKeptPage":"Questa pagina è in un volume Gilded.","lockedKeptPageSemantics":"{volume}: una pagina che hai conservato, in attesa in un volume Gilded, {kept}","missingPage":"Questa pagina non è in questa edizione.","openThisPage":"Aprire questa pagina nel libro","saveMyKeptPages":"Salvare le mie pagine conservate","keptPagesExportHead":"Le mie pagine conservate, da Hearten","keptPagesExportLine":"{text}\n· {volume}","keptPagesExportLocked":"{count, plural, one{E 1 altra pagina in attesa in un volume Gilded.} other{E altre {count} pagine in attesa in volumi Gilded.}}","recordUnreadable":"Non è stato possibile leggere il tuo registro ora.","searchPlaceholder":"una parola, un sentimento","searchFieldSemantics":"Cercare in ogni pagina","searchClear":"Svuotare la ricerca","searchCount":"{count, plural, one{1 pagina nomina {query}} other{{count} pagine nominano {query}}}","searchNothing":"Sugli scaffali ancora niente lo dice.","searchLockedCount":"{count, plural, one{1 altra pagina è in un volume Gilded} other{altre {count} pagine sono in volumi Gilded}}","searchCapped":"{count, plural, other{Mostriamo le prime {count}. Una ricerca più corta ne trova meno.}}","searchRecentsHead":"Cercato di recente","searchAgain":"Cercare di nuovo {query}","searchForget":"Dimenticare {query}","searchLoading":"Apriamo ogni libro sullo scaffale.","searchUnreadable":"Non è stato possibile cercare negli scaffali ora.","searchResultSemantics":"{volume}: {text}","statPagesRead":"pagine lette","statDaysInARow":"giorni di fila","statKept":"conservate","historyToday":"Oggi","historyYesterday":"Ieri","historyFoot":"Tocca una riga per riaprire quella pagina","historyEmpty":"Le pagine che leggerai saranno elencate qui, giorno per giorno.","historyMore":"Mostrare altro","historyEnd":"Questo è tutto il registro.","historyLineSemantics":"{time}, {volume}: {text}","historyKeptLineSemantics":"{time}, {volume}, conservata: {text}","historyUnreadable":"Non è stato possibile leggere le tue letture ora.","lockedHistoryLine":"Una pagina di un volume Gilded","hiddenPrompt":"{count, plural, one{Una pagina che hai chiesto di non rivedere.} other{{count} pagine che hai chiesto di non rivedere.}}","hiddenEmptyPrompt":"Non hai messo via nessuna pagina. Se mai lo farai, ti aspetterà qui.","hiddenFoot":"Una pagina che riporti torna in ogni libro a cui appartiene.","bringItBack":"Riportare questa pagina","bringItBackWord":"Riportare","pageBroughtBackToast":"Di nuovo nel tuo libro","unhideFailedToast":"Non è stato possibile riportare quella pagina.","hiddenPageSemantics":"{volume}: {text}","lockedHiddenPage":"Una pagina di un volume Gilded.","keptCount":"{count, plural, one{{count} conservata} other{{count} conservate}}","openingProgress":"Passo {step} di {total}","openingBegin":"Cominciare","openingContinue":"Continua","openingWelcomeTitle":"Un libro di giorni più luminosi,","openingWelcomeTitleEm":"scritto per te.","openingWelcomeBody":"Affermazioni che giri come pagine: gentili, senza fretta, e tue.","openingWelcomeNote":"Due minuti tranquilli per rilegare il tuo libro","openingNameTitle":"Cosa scriviamo sulla prima pagina?","openingNameBody":"Ogni affermazione sarà rivolta a te.","openingNamePlaceholder":"Il tuo nome","openingNameNote":"Il nome basta.","openingNameCta":"Sono io","openingNameSkipCta":"Lasciarlo senza firma","openingIntentionsTitle":"Cosa ti porta a queste pagine?","openingIntentionsTitleNamed":"{name}, cosa ti porta a queste pagine?","openingIntentionsBody":"Scegli tutto quello che senti vero.","intentionQuietMind":"Calmare la mente","intentionLoveMyself":"Amarmi di più","intentionBrighterMornings":"Mattine più luminose","intentionGrowConfident":"Prendere fiducia","intentionHealGently":"Guarire, con dolcezza","intentionSleepSoftly":"Dormire sereno","intentionFeelGrateful":"Sentire gratitudine","intentionFindCourage":"Trovare coraggio","intentionLetGo":"Lasciare andare quello che è stato","openingChaptersTitle":"Scegli i tuoi primi capitoli","openingChaptersBody":"Il tuo libro si aprirà su questi. L’intera Biblioteca ti aspetta comunque.","openingChaptersCount":"{count, plural, one{1 capitolo nel tuo libro} other{{count} capitoli nel tuo libro}}","openingChaptersNone":"Scegli quelli che ti chiamano","openingVoiceTitle":"Come deve parlarti il tuo libro?","voiceFriendName":"La voce vicina","voiceFriendSample":"La tua pagina è qui ogni volta che ci sei tu.","voicePoetName":"La voce poetica","voicePoetSample":"Una pagina è stata lasciata aperta per te.","voiceCoachName":"La voce che spinge","voiceCoachSample":"La tua pagina è pronta. Due minuti, poi vai.","voiceBlendLabel":"Una miscela di tutte e tre","openingRitualTitle":"Quando deve aprirsi il tuo libro?","openingRitualBody":"Notifiche gentili, come un segnalibro toccato due volte.","openingRitualCta":"Impostare il mio rituale","openingRitualNote":"Potrai aggiungere letture serali o nei giorni feriali più avanti.","openingRitualDenied":"Le notifiche sono spente, così il tuo libro non può ancora aprirsi da sé. La tua lettura è conservata, e dallo Studio puoi accenderle quando vuoi.","perDayCaption":"al giorno","openingBindingTitle":"Rileghiamo il tuo libro…","openingBindingTitleNamed":"Rileghiamo il libro di {name}…","openingBindingPages":"Scegliamo le tue pagine","openingBindingType":"Imprimiamo i caratteri","openingBindingSpine":"Cuciamo il dorso","openingBindingLight":"Scaldiamo la luce del mattino","openingInsideTitle":"Le tue prime pagine","openingInsideCaption":"pagine in attesa di essere girate","openingInsideYours":"pagine scelte per te","openingInsidePages":"{count, plural, one{{count} pagina in attesa di essere girata} other{{count} pagine in attesa di essere girate}}","openingInsidePagesYours":"{count, plural, one{{count} pagina scelta per te} other{{count} pagine scelte per te}}","openingInsideFactChapters":"{count, plural, one{1 capitolo, scelto da te} other{{count} capitoli, scelti da te}}","openingInsideFactVoice":"{voice} ti parlerà","openingInsideFactRitual":"{count, plural, one{La tua lettura arriva alle {from}} other{{count} letture al giorno, dalle {from} alle {until}}}","plainCount":"{count}","openingRevealEyebrow":"Il tuo libro è rilegato","openingRevealBody":"{count, plural, one{Una pagina scelta per i tuoi primi capitoli.} other{{count} pagine scelte per i tuoi primi capitoli.}}","openingRevealBodyBlend":"{count, plural, other{{count} pagine ti aspettano nella lettura di oggi.}}","openingRevealCta":"Aprire il mio libro","openedEyebrow":"Pronto quando lo sei tu","openedTitle":"Ora è tuo, {name}.","openedTitlePlain":"Ora è tuo.","openedGildedEyebrow":"L’edizione Gilded è tua","openedGildedTitle":"È tutto aperto, {name}.","openedGildedTitlePlain":"È tutto aperto.","openedOpenHead":"Aperto nel tuo libro","openedWaitingHead":"In attesa di Gilded","openedTodayNote":"La lettura di oggi attinge da ogni pagina aperta per te.","readingRefillTitlePoet":"Le tue letture si avvicinano all’ultima pagina","readingRefillTitleCoach":"È ora di ricaricare le tue letture","readingLastTitlePoet":"L’ultima pagina che il tuo libro teneva pronta","readingLastTitleCoach":"Quella era l’ultima. Apri il tuo libro per altre.","trialCtaSubscribe":"Prova gratis e abbonati","widgetsLead":"Due piccoli libri, uno sulla tua schermata Home.","widgetsSpreadHead":"Le pagine aperte","widgetsSpreadBody":"Quello largo resta aperto su una pagina del libro che hai aperto, con il suo capitolo sopra, come un libro lasciato a faccia in giù su un tavolo che ti aspetta.","widgetsLeafHead":"Una pagina","widgetsLeafBody":"Quello piccolo è un solo foglio dello stesso libro: il capitolo, e le parole sotto, grandi come un sottobicchiere.","widgetsBookHead":"Il libro chiuso","widgetsBookBody":"Quando non c’è niente su cui restare aperto, il piccolo libro è se stesso: rilegato nella tela che hai scelto, con una luce accesa finché una pagina ti aspetta ancora.","widgetsAddHead":"Metterne uno sulla schermata Home","widgetsAddIos":"Tocca e tieni premuta una parte vuota della schermata Home, tocca il più in alto, cerca Hearten, e scegli la misura che vuoi.","widgetsAddAndroid":"Tocca e tieni premuta una parte vuota della schermata Home, tocca Widget, cerca Hearten, e trascina al suo posto la misura che vuoi.","widgetsFreshHead":"Come restano freschi","widgetsFreshBody":"Seguono il libro che hai aperto: un giorno nuovo, una pagina che conservi o lasci andare, un’altra rilegatura, un’altra lingua. Due affiancati restano aperti su due pagine diverse.","widgetsGildedHead":"Nell’edizione Gilded","widgetsGildedBody":"I widget arrivano con Gilded. Senza, il piccolo libro resta sulla tua schermata Home, chiuso, e apre Hearten quando lo tocchi.","widgetPageAwaits":"una pagina ti aspetta","widgetPageTitle":"Pagina","widgetPageFirst":"La pagina di oggi","widgetPageSecond":"La seconda pagina","widgetPageThird":"La terza pagina","widgetPageFourth":"La quarta pagina","widgetEmptyFavorites":"Non hai ancora conservato niente. Piega un angolo e comparirà qui.","widgetEmptyOwnPages":"Ancora nessuna pagina tua. Scrivine una e comparirà qui.","widgetEmptyHidden":"Ogni pagina di questo libro è messa via.","widgetEmptyOpen":"Apri Hearten per cominciare il tuo libro.","widgetGalleryName":"Hearten","widgetGalleryDescription":"Una pagina del tuo libro, sulla tua schermata Home.","widgetOpenYourBook":"apri il tuo libro","widgetPageSemantics":"{volume}: {text}","iosCameraUsage":"Hearten usa la fotocamera perché tu possa rilegare un libro in una tua immagine. Le tue foto non lasciano mai questo dispositivo.","iosPhotoLibraryUsage":"Hearten apre le tue foto perché tu possa rilegare un libro in una delle tue. Le tue foto non lasciano mai questo dispositivo."},"pages":{"self_kindness":{"self_love.80":"Mi tratterò con la gentilezza che si riserva a un amico."},"giving_thanks":{"thankful.2":"Sono in pace con tutto ciò che ho ricevuto."},"worthiness":{"self_worth.44":"Posso lasciare che la gentilezza mi raggiunga."},"sleep":{"sleep.19":"Provo una tale leggerezza che il sonno mi culla con dolcezza."},"stillness":{"mindfulness.4":"Inspiro calma ed espiro tensione."},"confidence":{"confidence.102":"Mi guardo con occhi pieni di gentilezza."},"morning":{"morning.6":"Oggi e ogni giorno ricevo benedizioni.","morning.16":"Mi sveglio ogni mattina con il sorriso."},"calm":{"calm.35":"Dentro di me c’è pace, gioia e armonia."}},"config":{"hero":{"binding":"meadow","under":{"volume":"self_kindness","id":"self_love.80","folio":12},"turning":{"volume":"giving_thanks","id":"thankful.2","folio":11}},"shelf":[{"volume":"self_kindness"},{"volume":"confidence"},{"volume":"giving_thanks"},{"volume":"calm"},{"volume":"joy"},{"volume":"worthiness"},{"volume":"courage"},{"volume":"strength"},{"volume":"anxiety_relief"},{"volume":"sleep"},{"volume":"morning"},{"volume":"mending"}],"bindings":{"binding":"night_sea"},"keep":[{"volume":"worthiness","id":"self_worth.44","kept":{"key":"keptDaysAgo","count":2},"ribbon":"#c0917f"},{"volume":"sleep","id":"sleep.19","kept":{"key":"keptDaysAgo","count":4}},{"volume":"stillness","id":"mindfulness.4","kept":{"key":"keptWeeksAgo","count":1}}],"readings":{"wallpaper":"night_sea","stack":[{"volume":"confidence","id":"confidence.102"},{"volume":"morning","id":"morning.6","minutes":575},{"volume":"morning","id":"morning.16","minutes":480}]},"readingCards":[{"count":3,"from":390,"until":540,"book":"morning","days":[true,true,true,true,true,true,true]},{"count":1,"from":750,"until":840,"book":"calm","days":[false,true,true,true,true,true,false]},{"count":2,"from":1290,"until":1380,"book":"sleep","days":[true,true,true,true,true,true,true]}],"widgets":{"spread":{"volume":"giving_thanks","id":"thankful.2"},"leaf":{"volume":"calm","id":"calm.35"}}},"copy":{"own":{"sample":"Torno a me, ancora e ancora, come il fiume torna al mare.","reader":"Maya"},"readings":{"cards":["Pagine del mattino","Una pagina a pranzo","Prima di spegnere la luce"],"now":"ora"}}}</script>
+<script>window.__HEARTEN__ = JSON.parse(document.getElementById('hearten-data').textContent);</script>
+<script src="../behavior.js" defer></script>
+<script type="module" src="../hearten-live.5b347368.js"></script>
+</body>
+</html>

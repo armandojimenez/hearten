@@ -1,0 +1,532 @@
+/* Hearten — the landing page.
+   The page is the object it is selling: paper for the chapters that happen on
+   paper, cloth for the ones that happen on the cover, a running head and a
+   folio on every chapter, gilt hairlines, and one live book to turn. Every
+   colour is the app's own token (design/tokens/colors.css via
+   lib/theme/tokens.dart, including the accessibility overrides the app ships
+   over the design board); the two faces are the two the app bundles.
+   Hearten is one light theme by design: there is no dark mode to answer, so
+   the page paints its own ground and commits to morning light. */
+
+:root {
+  color-scheme: light;
+
+  --paper-0: #fdfaf2;
+  --paper-1: #fbf7ed;
+  --paper-2: #f6efdf;
+  --paper-3: #efe5cf;
+  --paper-edge: #d9cdaf;
+
+  --ink-1: #43392b;
+  --ink-2: #55482f;
+  --ink-3: #6d5c44;
+  --ink-muted: #74654c;   /* the app's A11Y override for metadata ink */
+  --ink-faint: #b3a488;
+
+  --clay: #8a5637;        /* the app's label ink */
+  --clay-soft: #ab7a55;
+  --clay-deep: #7a4a2e;
+  --sage-ink: #5c6b50;
+  --gilt: #c9a274;
+  --gold: #b98a4e;
+  --cream: #f9f4e4;
+  --cream-warm: #fcf7eb;
+
+  --hairline: rgba(105, 86, 58, .16);
+  --hairline-strong: rgba(105, 86, 58, .28);
+
+  --laid: repeating-linear-gradient(0deg, rgba(122,94,52,.024) 0px, rgba(122,94,52,.024) 1px, transparent 1px, transparent 4px);
+  --weave: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0px, rgba(255,255,255,.05) 1px, transparent 1px, transparent 3px),
+           repeating-linear-gradient(-45deg, rgba(60,70,50,.05) 0px, rgba(60,70,50,.05) 1px, transparent 1px, transparent 3px);
+
+  --display: 'Cormorant Garamond', 'Noto Serif JP', 'Noto Serif KR', Georgia, 'Times New Roman', serif;
+  --body: 'EB Garamond', 'Noto Serif JP', 'Noto Serif KR', Georgia, 'Times New Roman', serif;
+  --ui: -apple-system, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --measure: 1216px;
+  --gutter: clamp(20px, 5vw, 56px);
+
+  /* Set per band; every rule below reads these, never a literal. */
+  --band-ink: var(--ink-1);
+  --band-soft: var(--ink-muted);
+  --band-head: var(--clay);
+  --band-rule: var(--gilt);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+/* ── the script rules, from lib/l10n/script_rules.dart ───────────────────── */
+/* CJK takes no positive letter-spacing, opens its line boxes, and has no
+   drop cap to give: an initial in Japanese or Korean is a mistake, not an
+   ornament. The tracked labels keep their case; only the tracking goes. */
+[data-track='cjk'] .nav__mark,
+[data-track='cjk'] .runhead,
+[data-track='cjk'] .folio,
+[data-track='cjk'] .nav__links a.nav__cta,
+[data-track='cjk'] .lang-toggle__btn { letter-spacing: 0; text-indent: 0; }
+[data-track='cjk'] h1 { line-height: 1.24; }
+[data-track='cjk'] h2 { line-height: 1.28; }
+[data-track='cjk'] .lead,
+[data-track='cjk'] .body-copy,
+[data-track='cjk'] .faq__a,
+[data-track='cjk'] .doc p { line-height: 1.9; }
+[data-track='cjk'] .hl-accent { font-style: normal; }
+[data-track='cjk'] .body-copy--drop::first-letter {
+  float: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper-1);
+  color: var(--ink-1);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img, svg { max-width: 100%; }
+a { color: inherit; }
+
+::selection { background: rgba(201, 162, 116, .35); }
+
+:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.skip {
+  position: absolute;
+  inset-inline-start: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 12px 18px;
+  background: var(--paper-0);
+  color: var(--ink-1);
+}
+.skip:focus { inset-inline-start: 12px; top: 12px; }
+
+/* ── the running head at the top of the page ─────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px var(--gutter);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.nav.scrolled {
+  background: rgba(251, 247, 237, .94);
+  border-bottom-color: var(--hairline);
+  box-shadow: 0 6px 22px rgba(105, 86, 58, .07);
+}
+.nav__mark {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: .4em;
+  text-indent: .4em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav__links {
+  display: flex;
+  gap: 26px;
+  margin-inline-start: auto;
+  align-items: center;
+}
+.nav__links a {
+  font-size: 15.5px;
+  color: var(--ink-3);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.nav__links a:hover { border-bottom-color: var(--gilt); color: var(--ink-1); }
+.nav__links a.nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: .1em;
+  /* The tracked label is optically centred the way the app's caps are: the
+     trailing space of the last letter is paid back as an indent. */
+  text-indent: .1em;
+  padding: 12px 22px 12px 22px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #9c5f3e, #8a5637);
+  color: #fdf9ee;
+  text-decoration: none;
+  border-bottom: 0;
+  box-shadow: 0 8px 20px rgba(138, 90, 50, .28);
+  white-space: nowrap;
+}
+.nav__links a.nav__cta:hover { filter: brightness(1.06); color: #fdf9ee; border-bottom-color: transparent; }
+@media (max-width: 780px) { .nav__links a:not(.nav__cta) { display: none; } }
+
+/* ── bands: paper chapters and cloth chapters ────────────────────────────── */
+.band {
+  position: relative;
+  padding: clamp(64px, 9vw, 128px) var(--gutter);
+  overflow: hidden;
+  color: var(--band-ink);
+}
+.band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.band--paper {
+  background: linear-gradient(178deg, #fbf7ed 0%, #f6efdf 46%, #efe5cf 100%);
+}
+.band--paper::before { background: var(--laid); }
+.band--pale { background: linear-gradient(178deg, #fdfaf2 0%, #fbf7ed 60%, #f6efdf 100%); }
+.band--pale::before { background: var(--laid); }
+
+.band--cloth {
+  --band-ink: var(--cream);
+  --band-soft: rgba(249, 244, 228, .82);
+  --band-head: rgba(249, 244, 228, .78);
+  --band-rule: rgba(249, 244, 228, .5);
+}
+.band--cloth::before { background: var(--weave); }
+.band--night { background: linear-gradient(165deg, #58718c 0%, #48607a 52%, #3a4f66 100%); }
+.band--fig { background: linear-gradient(165deg, #7c6383 0%, #6b536f 52%, #5a4560 100%); }
+.band--sage { background: linear-gradient(165deg, #748367 0%, #66755a 52%, #5c6b50 100%); }
+.band--clay { background: linear-gradient(165deg, #9c5f3e 0%, #8a5637 52%, #7a4a2e 100%); }
+
+/* The app ground's own light: the 1a corner blooms on paper, the 7a warm
+   crown on cloth. */
+.bloom { position: absolute; border-radius: 999px; pointer-events: none; }
+.bloom--peach { top: -300px; left: -200px; width: 900px; height: 900px; background: radial-gradient(circle, rgba(226,196,153,.3), transparent 65%); }
+.bloom--sage { top: 60px; right: -280px; width: 820px; height: 820px; background: radial-gradient(circle, rgba(164,181,165,.24), transparent 65%); }
+.bloom--crown { top: -420px; left: 50%; transform: translateX(-50%); width: 1400px; height: 1400px; background: radial-gradient(circle, rgba(255,236,200,.2), transparent 62%); }
+
+.inner { position: relative; max-width: var(--measure); margin: 0 auto; }
+
+/* ── chapter heads: the folio, the running head, the gilt rule ───────────── */
+.chapter-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: clamp(28px, 4vw, 46px);
+}
+.folio {
+  font-family: var(--body);
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-indent: .18em;
+  color: var(--band-head);
+  font-variant-numeric: oldstyle-nums;
+  white-space: nowrap;
+}
+.runhead {
+  font-family: var(--body);
+  font-size: 12px;
+  letter-spacing: .3em;
+  text-indent: .3em;
+  text-transform: uppercase;
+  color: var(--band-head);
+  white-space: nowrap;
+}
+.chapter-head::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--band-rule), transparent 82%);
+  opacity: .8;
+}
+
+/* ── type ────────────────────────────────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -.01em;
+  margin: 0;
+  color: var(--band-ink);
+  text-wrap: balance;
+}
+h1 { font-size: clamp(3.1rem, 7.4vw, 5.5rem); line-height: 1.0; }
+h2 { font-size: clamp(2.35rem, 4.6vw, 3.5rem); line-height: 1.04; }
+h3 { font-size: 1.55rem; line-height: 1.2; font-weight: 500; }
+.hl { display: block; }
+.hl-accent {
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+  font-weight: 500;
+}
+/* The accent device the store deck uses: the page's own gilt rule, a hairline
+   that fades at both ends, under the word spoken softly. */
+.hl-accent::after {
+  content: '';
+  position: absolute;
+  left: .04em;
+  right: .04em;
+  bottom: -.02em;
+  height: .045em;
+  border-radius: .02em;
+  background: linear-gradient(90deg, transparent, var(--band-rule) 18%, var(--band-rule) 82%, transparent);
+  opacity: .9;
+}
+:lang(ja) .hl-accent, :lang(ko) .hl-accent, :lang(zh) .hl-accent { font-style: normal; }
+
+.lead {
+  font-size: clamp(1.16rem, 1.7vw, 1.34rem);
+  line-height: 1.62;
+  color: var(--band-ink);
+  max-width: 34em;
+  margin: 22px 0 0;
+}
+.body-copy {
+  font-size: 1.06rem;
+  line-height: 1.72;
+  color: var(--band-soft);
+  max-width: 36em;
+  margin: 18px 0 0;
+}
+.body-copy--drop::first-letter {
+  float: left;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 3.6em;
+  line-height: .8;
+  margin: .06em .1em 0 0;
+  color: var(--clay);
+}
+.note {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--band-soft);
+  margin: 18px 0 0;
+}
+
+/* ── the spread: a text column and a live column ─────────────────────────── */
+.spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+  gap: clamp(32px, 5vw, 74px);
+  align-items: center;
+}
+.spread--wide { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
+.spread--narrow { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+.spread__art { min-width: 0; }
+.spread--top { align-items: start; }
+.spread--flip .spread__words { order: 2; }
+.spread--flip .spread__art { order: 1; }
+@media (max-width: 900px) {
+  .spread, .spread--wide, .spread--narrow { grid-template-columns: minmax(0, 1fr); }
+  .spread--flip .spread__words, .spread--flip .spread__art { order: initial; }
+}
+
+/* ── the hero ────────────────────────────────────────────────────────────── */
+.hero { padding-top: clamp(104px, 13vw, 168px); }
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  gap: clamp(30px, 4.5vw, 68px);
+  align-items: center;
+}
+.hero__words { display: flex; flex-direction: column; min-width: 0; }
+.hero__badges { margin-top: 32px; }
+.hero__copy { margin-top: 26px; }
+/* On a phone the order is promise, then proof, then the way to get it: the
+   words wrapper dissolves so the book can sit between the sub and the badges. */
+@media (max-width: 900px) {
+  .hero__grid { display: flex; flex-direction: column; align-items: stretch; }
+  .hero__words { display: contents; }
+  .hero__title { order: 1; }
+  .hero__sub { order: 2; }
+  .hero__book { order: 3; margin-top: 26px; }
+  .hero__badges { order: 4; }
+  .hero__copy { order: 5; }
+}
+
+.badges { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.store-badge { display: inline-flex; text-decoration: none; }
+.store-badge img { display: block; width: auto; }
+.store-badge:hover { filter: brightness(1.04); }
+.free-line {
+  font-size: 14.5px;
+  color: var(--band-soft);
+  margin: 14px 0 0;
+}
+
+/* ── live surfaces ───────────────────────────────────────────────────────── */
+[data-live] { position: relative; }
+/* On a phone the hero box runs the full width of the screen so the open
+   cover leaves at the screen's own edge; on a wide screen the whole object
+   fits and nothing is cropped at all. */
+.live-book { width: 100%; max-width: 470px; aspect-ratio: 384 / 563; margin-inline: auto; }
+@media (min-width: 901px) { .live-book { max-width: 100%; aspect-ratio: 719 / 594; } }
+.live-phone { width: 100%; max-width: 430px; aspect-ratio: 558 / 1074; margin-inline: auto; }
+.live-scene { width: 100%; max-width: 640px; aspect-ratio: 718 / 1074; margin-inline: auto; }
+@media (max-width: 519px) { .live-scene { max-width: 430px; aspect-ratio: 558 / 1074; } }
+.live-colophon { width: 100%; max-width: 324px; aspect-ratio: 324 / 496; margin-inline: auto; }
+.live-cards { display: block; max-width: 430px; }
+/* The readings live on paper in the app, so they keep their paper here
+   rather than borrowing the cloth behind them. */
+.paper-panel {
+  background: linear-gradient(178deg, #fbf7ed 0%, #f5eedd 60%, #efe5cf 100%);
+  border-radius: 18px;
+  padding: 22px 22px 8px;
+  box-shadow: 0 16px 40px rgba(30, 40, 25, .22);
+  max-width: 430px;
+  margin-top: 28px;
+}
+.paper-panel .live-cards { max-width: none; }
+
+
+/* ── the shelf ───────────────────────────────────────────────────────────── */
+.shelf { display: block; }
+
+/* ── chips (the trust chapter) ───────────────────────────────────────────── */
+.chips { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(252, 247, 235, .94);
+  color: var(--sage-ink);
+  font-size: 15.5px;
+  box-shadow: 0 10px 24px rgba(40, 50, 30, .18);
+  white-space: nowrap;
+}
+
+/* ── the colophon and the close ──────────────────────────────────────────── */
+.colophon { text-align: center; }
+.colophon__quote {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.32;
+  color: var(--ink-1);
+  max-width: 22ch;
+  margin: 0 auto;
+  text-wrap: pretty;
+}
+.ornament { display: flex; justify-content: center; margin: 26px 0; opacity: .75; }
+.close-line {
+  font-size: 1.16rem;
+  color: var(--ink-muted);
+  margin: 0 auto;
+  max-width: 34em;
+}
+.colophon .badges { justify-content: center; margin-top: 30px; }
+
+.contact {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contact__btn {
+  font-family: var(--body);
+  font-size: 1.02rem;
+  letter-spacing: .02em;
+  color: var(--ink-2);
+  background: rgba(253, 250, 242, .7);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  padding: 11px 24px;
+  cursor: pointer;
+}
+.contact__btn:hover { background: var(--paper-0); border-color: var(--clay-soft); }
+
+.snackbar {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translate(-50%, 16px);
+  z-index: 300;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: rgba(69, 59, 45, .94);
+  color: #f7f1e2;
+  font-size: 15px;
+  box-shadow: 0 10px 30px rgba(69, 59, 45, .34);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.snackbar--show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ── the footer ──────────────────────────────────────────────────────────── */
+.foot {
+  padding: 44px var(--gutter) 54px;
+  background: var(--paper-3);
+  border-top: 1px solid var(--hairline);
+}
+.foot__inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+  font-size: 15px;
+  color: var(--ink-3);
+}
+.foot a { color: var(--ink-3); text-decoration: none; border-bottom: 1px solid var(--hairline-strong); padding-bottom: 1px; }
+.foot a:hover { color: var(--ink-1); border-bottom-color: var(--clay-soft); }
+.foot__mark { font-family: var(--display); font-style: italic; font-size: 1rem; color: var(--ink-muted); }
+.foot__end { margin-inline-start: auto; font-size: 13.5px; color: var(--ink-muted); }
+/* The language switcher appears once a second locale ships; the classes are
+   the pipeline's own contract (behavior.js, validate-landing.mjs). */
+.lang-toggle { display: flex; flex-wrap: wrap; gap: 8px; }
+.lang-toggle__btn {
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: .16em;
+  text-indent: .16em;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  padding: 5px 12px;
+  color: var(--ink-3);
+  cursor: pointer;
+  text-decoration: none;
+}
+.lang-toggle__btn[aria-current='true'] { background: rgba(171, 122, 85, .12); color: var(--ink-1); }
+
+/* ── the support page ────────────────────────────────────────────────────── */
+.doc { max-width: 46em; margin: 0 auto; }
+.doc h2 { margin-top: 46px; font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.doc p { color: var(--ink-2); }
+.faq { margin-top: 34px; }
+.faq__item { padding: 26px 0; border-top: 1px solid var(--hairline); }
+.faq__q { font-family: var(--display); font-size: 1.5rem; font-weight: 500; line-height: 1.25; color: var(--ink-1); margin: 0; }
+.faq__a { margin: 10px 0 0; color: var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
